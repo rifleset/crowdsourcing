@@ -3,19 +3,15 @@
 ## How to Run
 
 ### Step 1: Start the Backend
+**⚠️ Warning:** Ensure you are using **Java 17** before proceeding.
+
 1. Open a terminal and navigate to the Backend folder:
    ```bash
    cd Backend
    ```
 2. Build and run the application:
    ```bash
-   ./mvnw clean package
-   java -jar target/backend-0.0.1-SNAPSHOT.jar
-   ```
-
-   On Windows:
-   ```bash
-   mvnw.cmd clean package
+   mvn clean package
    java -jar target/backend-0.0.1-SNAPSHOT.jar
    ```
 
