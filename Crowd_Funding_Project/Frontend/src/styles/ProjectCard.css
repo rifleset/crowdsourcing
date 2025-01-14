@@ -1,0 +1,78 @@
+.edit-icon {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.delete-icon {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card-image {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.manage-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.disabled {
+    color: red;
+}
+
+.creator-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.creator-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.creatorLabel {
+    font-size: 1em;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-status {
+    padding: 4px 7px;
+    border-radius: 5px;
+    font-size: 0.7em;
+    color: #fff;
+    margin-top: -20px;
+}
+
+.status-pending {
+    background-color: #f0ad4e;
+}
+
+.status-approved {
+    background-color: #5cb85c;
+}
+
+.status-closed {
+    background-color: #d9534f;
+}
+
+.status-rejected {
+    background-color: #d9534f;
+}
+
+.title-funding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

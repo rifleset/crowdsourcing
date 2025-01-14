@@ -1,0 +1,116 @@
+.filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.filter-icon {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+    
+}
+
+.filter-icon.expanded {
+    color: #007BFF;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.filter-options label {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    color: #333;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+.filter-options input,
+.filter-options select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.filter-options input:focus,
+.filter-options select:focus {
+    border-color: #007BFF;
+}
+
+.filter-option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter-option-sort{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.pageBtn {
+    background-color: #509492;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pageBtn:hover {
+    background-color: #305c5a;
+}
+
+.material-icons.active {
+    color: #007BFF;
+}
+.create-link{
+    text-decoration: none;
+    color: black;
+}
+
+.filter-icon:hover{
+    background-color: #143a63;
+    color:#fff;
+}
+
+.add-icon{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px ;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.add-icon:hover{
+    background-color: #143a63;
+    color:#fff;
+}

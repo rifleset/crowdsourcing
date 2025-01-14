@@ -1,0 +1,43 @@
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.user-card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.2em;
+}
+
+.user-card p {
+    margin: 0 0 1rem;
+}
+
+.user-card button {
+    padding: 0.5rem;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-card button:hover {
+    background-color: #143a63;
+}
+
+.user-card-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+
+}

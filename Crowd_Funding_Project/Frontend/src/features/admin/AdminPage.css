@@ -1,0 +1,27 @@
+/* AdminPage.css */
+.admin-page {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.admin-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.admin-nav a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.admin-nav a:hover {
+    color: #0056b3;
+}
+
+.admin-nav a.active {
+    color: #0056b3;
+    font-weight: bold;
+}

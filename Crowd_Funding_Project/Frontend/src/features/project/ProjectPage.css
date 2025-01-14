@@ -1,0 +1,271 @@
+.project-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.funding-progress {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.title-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 2em;
+    color: #333;
+}
+
+.project-rating {
+    display: flex;
+    align-items: center;
+}
+
+.project-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.author-wrapper {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.project-content {
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.project-date {
+    display: block;
+    margin-top: 20px;
+    color: #888;
+    text-align: right;
+}
+
+
+
+form {
+    display: flex;
+    margin-top: 20px;
+}
+
+form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #143a63;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    flex-grow: 1;
+
+}
+
+.progress {
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 5px 0 0 5px;
+}
+
+.backers-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.backers-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.backers-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.backers-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.backer-name {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.backer-amount {
+    font-size: 1em;
+    color: #4caf50;
+}
+
+.updates-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex: 1
+}
+
+.updates-section form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex: 1;
+    width: 100%;
+}
+
+.updates-section textarea {
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    flex: 1
+}
+
+.updates-section button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updates-section button:hover {
+    background-color: #143a63;
+}
+
+.updates-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 98%;
+    flex-grow: 1;
+}
+
+.updates-list ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.updates-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.project-backers-null {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 200px;
+    font-size: 1.5em;
+    color: #888;
+}
+
+.toggle-funding-btn {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.toggle-funding-btn:hover {
+    background-color: #143a63;
+}
+
+.update-timestamp {
+    font-size: 0.8em;
+    color: #888;
+    /* margin-bottom: 5px; */
+}
+
+.update-message {
+    font-size: 1em;
+    color: #333;
+}

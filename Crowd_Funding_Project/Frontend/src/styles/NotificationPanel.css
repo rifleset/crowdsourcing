@@ -1,0 +1,35 @@
+/* NotificationPanel.css */
+
+.notification-panel {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px; /* Limit the height of the panel */
+    overflow-y: auto; /* Add a vertical scrollbar inside the panel */
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    color: #000;
+}
+
+.close-button {
+    float: right;
+    cursor: pointer;
+}
+
+.notification-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.notification-item p {
+    margin: 0;
+}
+
+.notification-item span {
+    font-size: 0.8em;
+    color: #888;
+}

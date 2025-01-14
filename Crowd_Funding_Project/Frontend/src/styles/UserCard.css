@@ -1,0 +1,72 @@
+.user-big-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.user-avatar {
+    margin-right: 20px;
+}
+
+.avatar-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    flex-grow: 1;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.user-email {
+    font-size: 1em;
+    color: #888;
+    margin-top: -8px;
+}
+
+.user-total {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+}
+
+.user-status {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.status-creator {
+    background-color: #5cb85c;
+}
+
+.status-backer {
+    background-color: #f0ad4e;
+}
