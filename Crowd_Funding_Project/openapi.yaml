@@ -1,0 +1,296 @@
+openapi: 3.0.0
+info:
+  title: Crowdfunding API
+  description: API documentation for a crowdfunding application. Includes user, project, funding management, and authentication endpoints.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+    description: Local development server
+
+paths:
+  /:
+    get:
+      summary: Get a list of all users
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of users
+
+  /{username}:
+    get:
+      summary: Get user details by username
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User details
+
+  /inbox:
+    get:
+      summary: Get user messages
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of user messages
+
+  /id/{id}:
+    get:
+      summary: Get user details by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: User details
+
+  /projects:
+    get:
+      summary: Get a list of all projects
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of projects
+
+  /projects/created:
+    get:
+      summary: Get projects created by the user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of user-created projects
+
+  /projects/{id}:
+    get:
+      summary: Get project details
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Project details
+
+  /projects/{id}/backers:
+    get:
+      summary: Get backers of a project
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List of project backers
+
+  /projects/{id}/fundings:
+    get:
+      summary: Get fundings of a project
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List of project fundings
+
+  /projects/{id}/creator:
+    get:
+      summary: Get creator details of a project
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Project creator details
+
+  /projects/pledged:
+    get:
+      summary: Get projects pledged by the user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of pledged projects
+
+  /projects/user/{userId}:
+    get:
+      summary: Get projects of a specific user by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: List of projects for the user
+
+  /projects/{id}/pledge:
+    post:
+      summary: Add funding to a project
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: number
+      responses:
+        '201':
+          description: Funding added successfully
+
+  /register:
+    post:
+      summary: Register a new user
+      description: This endpoint does not require authentication.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: User registered successfully
+
+  /login:
+    post:
+      summary: Authenticate user and get JWT
+      description: This endpoint does not require authentication.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: JWT token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+
+  /users:
+    get:
+      summary: Get all users (Admin only)
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of all users
+
+  /projects/{id}/approve:
+    put:
+      summary: Approve a project (Admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "approved"
+      responses:
+        '200':
+          description: Project approved successfully
+
+  /projects/{id}/reject:
+    put:
+      summary: Reject a project (Admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+                  example: "Insufficient details provided"
+      responses:
+        '200':
+          description: Project rejected successfully
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
