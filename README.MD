@@ -27,7 +27,7 @@
    ```
 
 ### Default URLs
-- **Backend**: `http://localhost:8080`
+- **Backend**: `http://localhost:5000`
 - **Frontend**: `http://localhost:3000`
 
 ---
